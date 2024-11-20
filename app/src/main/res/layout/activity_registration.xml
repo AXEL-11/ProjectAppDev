@@ -53,7 +53,7 @@
             android:textSize="17sp" />
 
         <EditText
-            android:id="@+id/editTextText3"
+            android:id="@+id/etname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30sp"
@@ -77,7 +77,7 @@
             android:textSize="17sp" />
 
         <EditText
-            android:id="@+id/editTextText4"
+            android:id="@+id/etmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30sp"
@@ -101,7 +101,7 @@
             android:textSize="17sp" />
 
         <EditText
-            android:id="@+id/editTextText5"
+            android:id="@+id/etpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30sp"
@@ -125,7 +125,7 @@
             android:textSize="17sp" />
 
         <EditText
-            android:id="@+id/editTextText6"
+            android:id="@+id/etdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30sp"
@@ -149,7 +149,7 @@
             android:textSize="17sp" />
 
         <EditText
-            android:id="@+id/editTextText7"
+            android:id="@+id/etaddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30sp"
@@ -173,7 +173,7 @@
             android:textSize="17sp" />
 
         <EditText
-            android:id="@+id/editTextText8"
+            android:id="@+id/etphone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30sp"
@@ -186,13 +186,14 @@
             android:textSize="27sp" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnsignup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30sp"
             android:layout_marginTop="20sp"
             android:layout_marginRight="30sp"
             android:background="@drawable/custom_edittext"
+            android:onClick="onSign"
             android:text="SIGN UP"
             android:textSize="34sp" />
 
