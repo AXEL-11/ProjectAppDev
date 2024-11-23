@@ -1,6 +1,8 @@
 package com.example.appdevfinalproject;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -44,5 +46,9 @@ public class ProductInfo extends AppCompatActivity {
         productprice.setText(productPrice);
         productimage.setImageResource(productImageResId);
         productdescription.setText(productDescription);
+    }
+    public void onsearch(View v){
+        Intent intent = new Intent(this, SearchBar.class);
+        startActivity(intent);
     }
 }

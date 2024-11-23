@@ -63,7 +63,7 @@
             android:ems="10"
             android:inputType="text"
             android:textAlignment="center"
-            android:textColor="#898686"
+            android:textColor="#000000"
             android:textSize="27sp" />
 
         <TextView
@@ -87,7 +87,7 @@
             android:ems="10"
             android:inputType="text"
             android:textAlignment="center"
-            android:textColor="#898686"
+            android:textColor="#000000"
             android:textSize="27sp" />
 
         <TextView
@@ -111,7 +111,7 @@
             android:ems="10"
             android:inputType="text"
             android:textAlignment="center"
-            android:textColor="#898686"
+            android:textColor="#000000"
             android:textSize="27sp" />
 
         <TextView
@@ -134,6 +134,8 @@
             android:background="@drawable/custom_edittext"
             android:ems="10"
             android:inputType="date"
+            android:textAlignment="center"
+            android:textColor="#000000"
             android:textSize="27sp" />
 
         <TextView
@@ -157,7 +159,7 @@
             android:ems="10"
             android:inputType="text"
             android:textAlignment="center"
-            android:textColor="#898686"
+            android:textColor="#000000"
             android:textSize="27sp" />
 
         <TextView
@@ -181,7 +183,7 @@
             android:ems="10"
             android:inputType="text"
             android:textAlignment="center"
-            android:textColor="#898686"
+            android:textColor="#000000"
             android:textSize="27sp" />
 
         <Button

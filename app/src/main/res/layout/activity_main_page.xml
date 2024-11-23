@@ -35,6 +35,7 @@
                 android:background="@drawable/custom_edittext"
                 android:hint="  Search Here....."
                 android:onClick="onsearch"
+                android:textColor="#000000"
                 android:textSize="24sp" />
 
             <ImageView
@@ -52,6 +53,7 @@
             android:layout_marginTop="20sp"
             android:background="#F4F0F0"
             android:text="Popular"
+            android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -67,6 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
             android:text="Recommendations"
+            android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -104,6 +107,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="23dp"
                         android:text="M8 Smart Monitor"
+                        android:textColor="#000000"
                         android:textStyle="bold" />
 
                     <TextView
@@ -143,6 +147,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="23dp"
                         android:text="Leaven K620 Keyboard"
+                        android:textColor="#000000"
                         android:textStyle="bold" />
 
                     <TextView
