@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     // Navigate to the registration page
     public void onNewacc(View v) {
         Intent intent = new Intent(this, Registration.class);
