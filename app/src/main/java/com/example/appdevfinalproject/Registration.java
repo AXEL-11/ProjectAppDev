@@ -28,7 +28,7 @@ public class Registration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
-        // Initialize UI elements
+
         etname = findViewById(R.id.etname);
         etpass = findViewById(R.id.etpassword);
         etmail = findViewById(R.id.etmail);
@@ -37,7 +37,7 @@ public class Registration extends AppCompatActivity {
         etdate = findViewById(R.id.etdate);
         btnsignup = findViewById(R.id.btnsignup);
 
-        // Set up the date picker for the date field
+
         etdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,13 +47,13 @@ public class Registration extends AppCompatActivity {
     }
 
     private void showDatePicker() {
-        // Get the current date
+
         final Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        // Create a DatePickerDialog
+
         DatePickerDialog datePickerDialog = new DatePickerDialog(
                 this,
                 new DatePickerDialog.OnDateSetListener() {
@@ -69,7 +69,7 @@ public class Registration extends AppCompatActivity {
                 day
         );
 
-        // Show the DatePickerDialog
+
         datePickerDialog.show();
     }
 
@@ -77,7 +77,7 @@ public class Registration extends AppCompatActivity {
         dbHelper = new DBHelper(this);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
-        // Get user input
+
         String username = etname.getText().toString().trim();
         String password = etpass.getText().toString().trim();
         String email = etmail.getText().toString().trim();
@@ -85,7 +85,7 @@ public class Registration extends AppCompatActivity {
         String phonenumber = etphone.getText().toString().trim();
         String date = etdate.getText().toString().trim();
 
-        // Validate input
+
         if (username.isEmpty() || password.isEmpty() || email.isEmpty() ||
                 address.isEmpty() || phonenumber.isEmpty() || date.isEmpty()) {
             Toast.makeText(this, "All fields are required!", Toast.LENGTH_SHORT).show();

@@ -39,7 +39,7 @@ public class SearchBar extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         SearchView searchView = findViewById(R.id.searchView);
 
-        // Initialize item list with image resource IDs
+
         itemList = new ArrayList<>();
         itemList.add(new Item("M8 Smart Monitor", "₱18,990.00", R.drawable.monitorm8, "A smart monitor with excellent features."));
         itemList.add(new Item("Leaven K620 Keyboard", "₱825.99", R.drawable.keyboard, "A durable and stylish mechanical keyboard."));
@@ -47,7 +47,7 @@ public class SearchBar extends AppCompatActivity {
 
         filteredList = new ArrayList<>(itemList); // Initialize with all items
 
-        // Set up the RecyclerView
+
         adapter = new ItemAdapter(this, filteredList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
@@ -82,7 +82,7 @@ public class SearchBar extends AppCompatActivity {
             }
         }
 
-        // Notify adapter of the change in data
+
         adapter.notifyDataSetChanged();
     }
 }

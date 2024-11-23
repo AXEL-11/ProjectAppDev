@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         String username = etus.getText().toString();
         String password = etpw.getText().toString();
 
-        // Get readable database and query for user credentials
+
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM users WHERE username=? AND password=?",
                 new String[]{username, password});

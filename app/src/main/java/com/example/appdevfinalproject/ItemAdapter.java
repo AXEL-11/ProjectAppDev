@@ -38,7 +38,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         holder.priceTextView.setText(item.getPrice());
         holder.itemImageView.setImageResource(item.getImageResId());
 
-        // Set click listener
+
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, ProductInfo.class);
             intent.putExtra("productName", item.getName());
