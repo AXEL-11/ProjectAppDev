@@ -13,8 +13,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class ProductInfo extends AppCompatActivity {
 
-    // Declare the views
-    TextView productname, productprice, productdescription;
+
+    TextView productname, productprice, productdescription, productlocation, productspecifications;
     ImageView productimage;
 
     @Override
@@ -29,23 +29,29 @@ public class ProductInfo extends AppCompatActivity {
             return insets;
         });
 
-
+        productspecifications = findViewById(R.id.productspecifications);
+        productlocation = findViewById(R.id.productlocation);
         productimage = findViewById(R.id.productimage);
         productname = findViewById(R.id.Productname);
         productprice = findViewById(R.id.productprice);
         productdescription = findViewById(R.id.productdescription);
 
 
+
         String productName = getIntent().getStringExtra("productName");
         String productPrice = getIntent().getStringExtra("productPrice");
         int productImageResId = getIntent().getIntExtra("productImageResId", 0);
         String productDescription = getIntent().getStringExtra("productDescription");
+        String productSpecifications = getIntent().getStringExtra("productSpecifications");
+        String productLocation = getIntent().getStringExtra("productLocation");
 
 
         productname.setText(productName);
         productprice.setText(productPrice);
         productimage.setImageResource(productImageResId);
         productdescription.setText(productDescription);
+        productspecifications.setText(productSpecifications);
+        productlocation.setText(productLocation);
     }
     public void onsearch(View v){
         Intent intent = new Intent(this, SearchBar.class);

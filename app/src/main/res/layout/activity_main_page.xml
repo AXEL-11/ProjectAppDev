@@ -61,6 +61,23 @@
             android:layout_width="match_parent"
             android:layout_height="149dp">
 
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="326dp"
+                android:layout_height="144dp"
+                app:srcCompat="@drawable/img_2"
+                tools:layout_editor_absoluteX="81dp"
+                tools:layout_editor_absoluteY="1dp" />
+
+            <TextView
+                android:id="@+id/productname1"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:text="M8 Smart Monitor"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="-4dp"
+                tools:layout_editor_absoluteY="96dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
@@ -126,6 +143,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10sp"
                 android:layout_marginRight="10sp"
+                android:onClick="Onitem2"
                 android:orientation="vertical">
 
                 <ImageView
@@ -133,8 +151,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="109dp"
                     android:background="@drawable/above"
-                    tools:srcCompat="@drawable/keyboard"
-                    android:src="@drawable/keyboard"/>
+                    android:src="@drawable/keyboard"
+                    tools:srcCompat="@drawable/keyboard" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -174,25 +192,32 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10sp"
                 android:layout_marginRight="10sp"
+                android:onClick="Onitem3"
                 android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/productimg1"
                     android:layout_width="match_parent"
                     android:layout_height="109dp"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    tools:srcCompat="@drawable/img" />
 
                 <TextView
                     android:id="@+id/productname1"
                     android:layout_width="match_parent"
                     android:layout_height="23dp"
-                    android:text="TextView" />
+                    android:text="Gigabyte GeForce RTX 4060 Ti Gaming OC 16GB GDDR6 PCI Express 4.0 Graphics Card"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/productprice1"
                     android:layout_width="match_parent"
                     android:layout_height="39dp"
-                    android:text="TextView" />
+                    android:text="₱30,000"
+                    android:textColor="#9C27B0"
+                    android:textColorLink="#9C27B0"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -200,25 +225,32 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10sp"
                 android:layout_marginRight="10sp"
+                android:onClick="Onitem4"
                 android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/productimg1"
                     android:layout_width="match_parent"
                     android:layout_height="109dp"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    tools:srcCompat="@drawable/img_1" />
 
                 <TextView
                     android:id="@+id/productname1"
                     android:layout_width="match_parent"
                     android:layout_height="23dp"
-                    android:text="TextView" />
+                    android:text="Corsair Vengeance RGB 32GB (2 x 16GB) DDR5 6000MHz C36 UDIMM Desktop Memory "
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/productprice1"
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
-                    android:text="TextView" />
+                    android:text="₱6,660 "
+                    android:textColor="#9C27B0"
+                    android:textColorLink="#9C27B0"
+                    android:textSize="20sp" />
             </LinearLayout>
 
         </LinearLayout>

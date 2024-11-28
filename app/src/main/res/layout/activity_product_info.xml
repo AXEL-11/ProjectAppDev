@@ -112,7 +112,7 @@
             android:textColor="#000000" />
 
         <TextView
-            android:id="@+id/textView23"
+            android:id="@+id/productspecifications"
             android:layout_width="match_parent"
             android:layout_height="106dp"
             android:text="TextView"
@@ -132,7 +132,7 @@
             android:textColor="#000000" />
 
         <TextView
-            android:id="@+id/textView25"
+            android:id="@+id/productlocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"

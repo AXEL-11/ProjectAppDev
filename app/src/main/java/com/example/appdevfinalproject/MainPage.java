@@ -48,5 +48,23 @@ public class MainPage extends AppCompatActivity {
 
         startActivity(intent);
     }
+    public void Onitem2(View v){
+        Intent intent = new Intent(this, ProductInfo.class);
+        intent.putExtra("productName", "M8 Smart Monitor");
+        intent.putExtra("productPrice", "₱18,990.00");
+        intent.putExtra("productImageResId", R.drawable.monitorm8);
+        intent.putExtra("productDescription", "The Gigabyte GeForce RTX 4060 Ti Gaming OC 16GB is a powerful graphics card that delivers stunning visuals and fast frame rates for gaming and creative applications. It is powered by NVIDIA's new RTX architecture, which includes enhanced RT cores and tensor cores for AI acceleration. The card also boasts a staggering 16GB of GDDR6 memory. ");
+        intent.putExtra("productSpecifications", "Model: GV-N406T-GAMING-OC-16GD - SKU: 6551341 -\n Memory: 16GB GDDR6 - \nInterface: PCI Express 4.0 - \nFeatures: Enhanced RT cores, tensor cores, AI acceleration ");
+        intent.putExtra("productLocation", "La Union");
+    }
+
+    public void Onitem3(View v){
+
+    }
+
+    public void Onitem4(View v){
+
+    }
+
 
 }
