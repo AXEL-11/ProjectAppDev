@@ -44,26 +44,68 @@ public class MainPage extends AppCompatActivity {
         intent.putExtra("productName", "M8 Smart Monitor");
         intent.putExtra("productPrice", "₱18,990.00");
         intent.putExtra("productImageResId", R.drawable.monitorm8);
-        intent.putExtra("productDescription", "A smart monitor with excellent features.");
+        intent.putExtra("productDescription", " a versatile 32-inch 4K UHD display that combines the functionality of a traditional monitor with smart TV features, making it suitable for work, entertainment, and gaming.");
+        intent.putExtra("productSpecifications", "Display: 32-inch 4K UHD (3840 x 2160) resolution with HDR10+ support for vivid colors and deep contrast.\nDesign: Slim and stylish build with a height-adjustable and tiltable ergonomic stand.\nPorts: Multiple connectivity options, including USB-C, HDMI, and USB-A, supporting data transfer, device charging, and multi-screen setup");
+        intent.putExtra("productLocation", "La Union");
 
         startActivity(intent);
     }
     public void Onitem2(View v){
+
         Intent intent = new Intent(this, ProductInfo.class);
-        intent.putExtra("productName", "M8 Smart Monitor");
-        intent.putExtra("productPrice", "₱18,990.00");
-        intent.putExtra("productImageResId", R.drawable.monitorm8);
-        intent.putExtra("productDescription", "The Gigabyte GeForce RTX 4060 Ti Gaming OC 16GB is a powerful graphics card that delivers stunning visuals and fast frame rates for gaming and creative applications. It is powered by NVIDIA's new RTX architecture, which includes enhanced RT cores and tensor cores for AI acceleration. The card also boasts a staggering 16GB of GDDR6 memory. ");
-        intent.putExtra("productSpecifications", "Model: GV-N406T-GAMING-OC-16GD - SKU: 6551341 -\n Memory: 16GB GDDR6 - \nInterface: PCI Express 4.0 - \nFeatures: Enhanced RT cores, tensor cores, AI acceleration ");
-        intent.putExtra("productLocation", "La Union");
+        intent.putExtra("productName", "Leaven K620 Keyboard");
+        intent.putExtra("productPrice", "₱825.99");
+        intent.putExtra("productImageResId", R.drawable.keyboard);
+        intent.putExtra("productDescription", " a compact 61-key mechanical keyboard designed for gaming and productivity.");
+        intent.putExtra("productSpecifications", "Connection: Wired (Type-C)\n" +
+                "Material: PBT keycaps with injection molding\n" +
+                "Lighting Modes: Up to 17 different RGB effects\n" +
+                "Compatibility: Works with Windows and macOS systems\n" +
+                "Dimensions: Lightweight and portable design optimized for compact setup");
+        intent.putExtra("productLocation", "Laguna");
+
+        startActivity(intent);
     }
 
     public void Onitem3(View v){
 
+        Intent intent = new Intent(this, ProductInfo.class);
+        intent.putExtra("productName", "Gigabyte GeForce RTX 4060 Ti Gaming OC 16GB GDDR6 PCI Express 4.0 Graphics Card - Black");
+        intent.putExtra("productPrice", "₱30,000");
+        intent.putExtra("productImageResId", R.drawable.img);
+        intent.putExtra("productDescription", "The Gigabyte GeForce RTX 4060 Ti Gaming OC 16GB is a powerful graphics card that delivers stunning visuals and fast frame rates for gaming and creative applications. It is powered by NVIDIA's new RTX architecture, which includes enhanced RT cores and tensor cores for AI acceleration. The card also boasts a staggering 16GB of GDDR6 memory. ");
+        intent.putExtra("productSpecifications", "Model: GV-N406T-GAMING-OC-16GD - SKU: 6551341 -\n Memory: 16GB GDDR6 - \nInterface: PCI Express 4.0 - \nFeatures: Enhanced RT cores, tensor cores, AI acceleration ");
+        intent.putExtra("productLocation", "La Union");
+
+        startActivity(intent);
     }
 
     public void Onitem4(View v){
 
+        Intent intent = new Intent(this, ProductInfo.class);
+        intent.putExtra("productName", "Corsair Vengeance RGB 32GB (2 x 16GB) DDR5 6000MHz C36 UDIMM Desktop Memory - White");
+        intent.putExtra("productPrice", "₱6,660");
+        intent.putExtra("productImageResId", R.drawable.img_1);
+        intent.putExtra("productDescription", "Corsair Vengeance RGB 32GB (2 x 16GB) DDR5 6000MHz C36 UDIMM Desktop Memory - White");
+        intent.putExtra("productSpecifications", " Model: CMH32GX5M2E6000C36W - SKU: 6562319 - Capacity: 32GB (2 x 16GB) - Speed: 6000MHz - Latency: C36 - Features: RGB lighting, onboard voltage regulation, Intel XMP 3.0 support ");
+        intent.putExtra("productLocation", "Baguio");
+
+        startActivity(intent);
+    }
+
+    public void Onitem5(View v){
+
+        Intent intent = new Intent(this, ProductInfo.class);
+        intent.putExtra("productName", "NVIDIA GeForce RTX 4090 Ti");
+        intent.putExtra("productPrice", "₱12,000");
+        intent.putExtra("productImageResId", R.drawable.img_5);
+        intent.putExtra("productDescription", "A top-of-the-line graphics card for extreme gaming and professional workloads.");
+        intent.putExtra("productSpecifications","CUDA Cores: 18432\n" +
+        " Memory: 24GB GDDR6X\n" +
+                "Memory Clock Speed: 21Gbps\n");
+        intent.putExtra("productLocation", "Bicol");
+
+        startActivity(intent);
     }
 
 
