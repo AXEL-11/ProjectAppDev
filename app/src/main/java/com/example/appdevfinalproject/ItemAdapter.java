@@ -17,10 +17,12 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
     private List<Item> itemList;
     private Context context;
+    private String username;
 
-    public ItemAdapter(Context context, List<Item> itemList) {
+    public ItemAdapter(Context context, List<Item> itemList, String username) {
         this.context = context;
         this.itemList = itemList;
+        this.username = username;
     }
 
     @NonNull
@@ -35,12 +37,13 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Item item = itemList.get(position);
         holder.nameTextView.setText(item.getName());
-        holder.priceTextView.setText(item.getPrice());
+        holder.priceTextView.setText("₱"+item.getPrice());
         holder.itemImageView.setImageResource(item.getImageResId());
 
 
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, ProductInfo.class);
+            intent.putExtra("username", username);
             intent.putExtra("productName", item.getName());
             intent.putExtra("productPrice", item.getPrice());
             intent.putExtra("productImageResId", item.getImageResId());

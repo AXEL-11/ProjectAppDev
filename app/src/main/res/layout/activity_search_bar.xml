@@ -8,7 +8,7 @@
     android:background="#F4F0F0"
     tools:context=".SearchBar">
 
-    <!-- SearchView at the top -->
+
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="321dp"
@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- RecyclerView to display the list -->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="0dp"

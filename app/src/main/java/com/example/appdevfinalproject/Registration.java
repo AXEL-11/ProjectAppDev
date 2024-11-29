@@ -2,6 +2,7 @@ package com.example.appdevfinalproject;
 
 import android.app.DatePickerDialog;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -59,7 +60,7 @@ public class Registration extends AppCompatActivity {
                 new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int selectedYear, int selectedMonth, int selectedDay) {
-                        // Update the EditText with the selected date
+
                         String formattedDate = String.format("%04d-%02d-%02d", selectedYear, selectedMonth + 1, selectedDay);
                         etdate.setText(formattedDate);
                     }
@@ -118,6 +119,8 @@ public class Registration extends AppCompatActivity {
         try {
             db.insertOrThrow("users", null, values);
             Toast.makeText(this, "User registered successfully", Toast.LENGTH_SHORT).show();
+
+
             finish();
         } catch (SQLiteConstraintException e) {
             Toast.makeText(this, "Username or email already exists", Toast.LENGTH_SHORT).show();
