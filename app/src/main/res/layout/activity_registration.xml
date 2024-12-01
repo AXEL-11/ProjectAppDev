@@ -5,198 +5,165 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Registration">
+    android:background="#ffff"
+    tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="379dp"
+        android:layout_height="102dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        android:background="#F4F0F0"
-        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.244">
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="30sp"
-            android:paddingTop="20sp"
-            android:paddingRight="30sp"
-            android:text="Create New Account"
-            android:textAlignment="center"
-            android:textColor="#9C27B0"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textColor="#898686"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
-            android:layout_marginBottom="10sp"
-            android:text="NAME"
-            android:textAlignment="center"
-            android:textColor="#898686"
-            android:textSize="17sp" />
-
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30sp"
-            android:layout_marginRight="30sp"
-            android:background="@drawable/custom_edittext"
-            android:ems="10"
-            android:inputType="text"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="27sp" />
+            android:hint="Full name"
+            android:maxLines="1"
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
-            android:layout_marginBottom="10sp"
-            android:text="EMAIL"
-            android:textAlignment="center"
-            android:textColor="#898686"
-            android:textSize="17sp" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="379dp"
+        android:layout_height="102dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.343"
+        tools:ignore="DuplicateIds">
 
-        <EditText
-            android:id="@+id/etmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30sp"
-            android:layout_marginRight="30sp"
-            android:background="@drawable/custom_edittext"
-            android:ems="10"
-            android:inputType="text"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="27sp" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
-            android:layout_marginBottom="10sp"
-            android:text="PASSWORD"
-            android:textAlignment="center"
-            android:textColor="#898686"
-            android:textSize="17sp" />
-
-        <EditText
-            android:id="@+id/etpassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30sp"
-            android:layout_marginRight="30sp"
-            android:background="@drawable/custom_edittext"
-            android:ems="10"
-            android:inputType="text"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="27sp" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
-            android:layout_marginBottom="10sp"
-            android:text="DATE OF BIRTH"
-            android:textAlignment="center"
-            android:textColor="#898686"
-            android:textSize="17sp" />
-
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30sp"
-            android:layout_marginRight="30sp"
-            android:background="@drawable/custom_edittext"
-            android:ems="10"
-            android:inputType="date"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="27sp" />
+            android:hint="Date of Birth"
+            android:maxLines="1"
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/textView13"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_password_edit_text"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="379dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.756"
+        tools:ignore="DuplicateIds">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
-            android:layout_marginBottom="10sp"
-            android:text="ADDRESS"
-            android:textAlignment="center"
-            android:textColor="#898686"
-            android:textSize="17sp" />
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            tools:ignore="HardcodedText" />
 
-        <EditText
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnsignup"
+        android:layout_width="358dp"
+        android:layout_height="48dp"
+        android:text="SIGN UP"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        tools:ignore="HardcodedText,TextSizeCheck,VisualLintButtonSize" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="518dp"
+        android:layout_height="165dp"
+        android:background="#ff0065"
+        android:fontFamily="@font/inter_semibold"
+        android:gravity="center"
+        android:text="Create new Account"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="379dp"
+        android:layout_height="102dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.441">
+
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etaddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30sp"
-            android:layout_marginRight="30sp"
-            android:background="@drawable/custom_edittext"
-            android:ems="10"
-            android:inputType="text"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="27sp" />
+            android:hint="Address"
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/textView14"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="379dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.543">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
-            android:layout_marginBottom="10sp"
-            android:text="PHONE NUMBER"
-            android:textAlignment="center"
-            android:textColor="#898686"
-            android:textSize="17sp" />
+            android:hint="email"
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="379dp"
+        android:layout_height="102dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.647">
+
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etphone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30sp"
-            android:layout_marginRight="30sp"
-            android:background="@drawable/custom_edittext"
-            android:ems="10"
-            android:inputType="text"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="27sp" />
+            android:hint="Phone Number"
+            android:inputType="phone"
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/btnsignup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30sp"
-            android:layout_marginTop="20sp"
-            android:layout_marginRight="30sp"
-            android:background="@drawable/custom_edittext"
-            android:onClick="onSign"
-            android:text="SIGN UP"
-            android:textSize="34sp" />
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

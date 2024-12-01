@@ -18,14 +18,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Shipping Address"
-        android:inputType="textPostalAddress"/>
+        android:inputType="textPostalAddress"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/phone_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Phone Number"
-        android:inputType="phone"/>
+        android:inputType="phone"
+        android:minHeight="48dp" />
 
 
     <RadioGroup
@@ -38,22 +40,22 @@
             android:id="@+id/radio_credit_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Credit Card"
-            android:checked="false"/>
+            android:checked="false"
+            android:text="Credit Card" />
 
         <RadioButton
             android:id="@+id/radio_paypal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="PayPal"
-            android:checked="false"/>
+            android:checked="false"
+            android:text="PayPal" />
 
         <RadioButton
             android:id="@+id/radio_cod"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cash on Delivery"
-            android:checked="false"/>
+            android:checked="false"
+            android:text="Cash on Delivery" />
 
     </RadioGroup>
 
@@ -61,7 +63,7 @@
         android:id="@+id/confirm_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Confirm Payment"
-        android:onClick="confirmPayment"/>
+        android:onClick="confirmPayment"
+        android:text="Confirm Payment" />
 
 </LinearLayout>

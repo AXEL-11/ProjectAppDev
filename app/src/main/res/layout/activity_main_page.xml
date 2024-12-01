@@ -30,10 +30,10 @@
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="284dp"
+                android:layout_width="246dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/custom_edittext"
-                android:hint="  Search Here....."
+                android:hint="  Search..."
                 android:onClick="onsearch"
                 android:textColor="#000000"
                 android:textSize="24sp" />
@@ -43,7 +43,7 @@
                 android:layout_width="30dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/search" />
+                app:srcCompat="@drawable/search1" />
         </LinearLayout>
 
         <TextView
@@ -264,35 +264,8 @@
                 android:layout_marginTop="10sp"
                 android:layout_weight="1"
                 android:onClick="onCart"
-                android:src="@drawable/shoppingcart1"
-                tools:srcCompat="@drawable/shoppingcart1" />
-
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="118dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="10sp"
-                android:layout_weight="1"
-                tools:srcCompat="@drawable/chat1"
-                android:src="@drawable/chat1"/>
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="118dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="10sp"
-                android:layout_weight="1"
-                tools:srcCompat="@drawable/home1"
-                android:src="@drawable/home1"/>
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="118dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="10sp"
-                android:layout_weight="1"
-                tools:srcCompat="@drawable/bell1"
-                android:src="@drawable/bell1"/>
+                android:src="@drawable/cart"
+                tools:srcCompat="@drawable/cart" />
 
             <ImageView
                 android:id="@+id/imageView4"
@@ -301,8 +274,8 @@
                 android:layout_marginTop="10sp"
                 android:layout_weight="1"
                 android:onClick="OnUser"
-                android:src="@drawable/user1"
-                tools:srcCompat="@drawable/user1" />
+                android:src="@drawable/user"
+                tools:srcCompat="@drawable/user" />
         </LinearLayout>
 
     </LinearLayout>

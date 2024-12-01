@@ -39,7 +39,7 @@
                 android:layout_width="30dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/search" />
+                app:srcCompat="@drawable/search1" />
         </LinearLayout>
 
         <ImageView
@@ -161,6 +161,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15sp"
                 android:layout_weight="1"
+                android:onClick="onBuynow"
                 android:text="Buy Now" />
 
             <Button

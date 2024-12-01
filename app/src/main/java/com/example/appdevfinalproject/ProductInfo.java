@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,6 +43,24 @@ public class ProductInfo extends AppCompatActivity {
         productdescription.setText(productDescription != null ? productDescription : "No description available.");
         productspecifications.setText(productSpecifications != null ? productSpecifications : "No specifications available.");
         productlocation.setText(productLocation != null ? productLocation : "Unknown location");
+
+        Button buyNowButton = findViewById(R.id.button3);
+        buyNowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProductInfo.this, CheckOut.class);
+
+                // Pass product data to checkout activity
+                intent.putExtra("productName", productname.getText().toString());
+                intent.putExtra("productPrice", productprice.getText().toString().replace("₱", "").trim());
+                intent.putExtra("productDescription", productdescription.getText().toString());
+                intent.putExtra("productSpecifications", productspecifications.getText().toString());
+                intent.putExtra("productLocation", productlocation.getText().toString());
+
+                // Start checkout activity
+                startActivity(intent);
+            }
+        });
 
 
     }
