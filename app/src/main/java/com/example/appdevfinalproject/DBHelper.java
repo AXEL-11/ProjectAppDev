@@ -12,11 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DBHelper extends SQLiteOpenHelper {
-
+    // database name
     private static final String DB_NAME = "Users.db";
-    private static final int DB_VERSION = 2; // Incremented version for schema updates
+    private static final int DB_VERSION = 2;
 
-
+    //represent columns
     public static final String TABLE_USERS = "users";
     public static final String COLUMN_USERNAME = "username";
     public static final String COLUMN_EMAIL = "email";
@@ -30,14 +30,14 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String COLUMN_PRODUCT_NAME = "product_name";
     public static final String COLUMN_PRODUCT_PRICE = "product_price";
     public static final String COLUMN_PRODUCT_IMAGE = "product_image";
-
+     //Constructor
     public DBHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        // create table for login and registration
         String createUserTableQuery = "CREATE TABLE " + TABLE_USERS + " (" +
                 COLUMN_USERNAME + " TEXT UNIQUE NOT NULL, " +
                 COLUMN_EMAIL + " TEXT UNIQUE NOT NULL, " +
@@ -47,7 +47,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 COLUMN_PHONENUMBER + " TEXT DEFAULT '')";
         db.execSQL(createUserTableQuery);
 
-
+        // table for item or product
         String createCartTableQuery = "CREATE TABLE " + TABLE_CART + " (" +
                 COLUMN_CART_USERNAME + " TEXT NOT NULL, " +
                 COLUMN_PRODUCT_NAME + " TEXT NOT NULL, " +
@@ -58,22 +58,23 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     @Override
+    //handle changes
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_CART);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
         onCreate(db);
     }
 
-
+    // for adding to cart
     public void addToCart(String username, String productName, double productPrice, int productImage) {
         SQLiteDatabase db = this.getWritableDatabase();
 
-
+//retrieve rows
         Cursor cursor = db.rawQuery(
                 "SELECT * FROM " + TABLE_CART + " WHERE " + COLUMN_CART_USERNAME + " = ? AND " + COLUMN_PRODUCT_NAME + " = ?",
                 new String[]{username, productName}
         );
-
+// check if it already exists
         if (!cursor.moveToFirst()) {
 
             ContentValues values = new ContentValues();
@@ -88,7 +89,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-
+    //retrieve items on cart
     public List<CartItem> getCartItems(String username) {
         List<CartItem> cartItems = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
@@ -112,6 +113,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
         return cartItems;
     }
+    //for user profile
     public Cursor getUserDetails(String username) {
         SQLiteDatabase db = this.getReadableDatabase();
         return db.rawQuery(

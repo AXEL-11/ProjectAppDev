@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
         dbHelper = new DBHelper(this);
     }
     public void onLogin(View v) {
-        String username = etus.getText().toString().trim();  // Trim to avoid unwanted spaces
-        String password = etpw.getText().toString().trim();  // Trim to avoid unwanted spaces
-
+        String username = etus.getText().toString().trim();
+        String password = etpw.getText().toString().trim();
+// fill out all edittext
         if (username.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Please fill in both fields", Toast.LENGTH_SHORT).show();
             return;
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
-
+//execte query
         Cursor cursor = db.rawQuery("SELECT * FROM users WHERE username=? AND password=?", new String[]{username, password});
 
         if (cursor != null) {

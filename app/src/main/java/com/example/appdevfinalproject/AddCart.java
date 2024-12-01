@@ -51,7 +51,7 @@ public class AddCart extends AppCompatActivity {
 
         checkoutButton.setOnClickListener(v -> proceedToCheckout());
     }
-
+    // display the list of cart items
     private void populateCartItems() {
         cartItemContainer.removeAllViews();
 
@@ -59,7 +59,7 @@ public class AddCart extends AppCompatActivity {
 
             View cartItemView = LayoutInflater.from(this).inflate(R.layout.cart_item, cartItemContainer, false);
 
-
+//retrieve references
             CheckBox itemCheckBox = cartItemView.findViewById(R.id.cart_item_checkbox);
             ImageView productImage = cartItemView.findViewById(R.id.cart_item_image);
             TextView productName = cartItemView.findViewById(R.id.cart_item_name);
@@ -71,7 +71,7 @@ public class AddCart extends AppCompatActivity {
             productName.setText(item.getProductName());
             productPrice.setText("₱" + item.getProductPrice());
 
-
+//spinner
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                     R.array.quantity_options, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -84,11 +84,11 @@ public class AddCart extends AppCompatActivity {
             cartItemContainer.addView(cartItemView);
         }
     }
-
+//CALCULATE TOTAL price
     private void proceedToCheckout() {
         double total = 0;
 
-
+//iterate
         for (int i = 0; i < cartItemContainer.getChildCount(); i++) {
             View cartItemView = cartItemContainer.getChildAt(i);
             CheckBox itemCheckBox = cartItemView.findViewById(R.id.cart_item_checkbox);

@@ -46,7 +46,7 @@ public class Registration extends AppCompatActivity {
             }
         });
     }
-
+// calendart
     private void showDatePicker() {
 
         final Calendar calendar = Calendar.getInstance();
@@ -73,7 +73,7 @@ public class Registration extends AppCompatActivity {
 
         datePickerDialog.show();
     }
-
+// sign in
     public void onSign(View v) {
         dbHelper = new DBHelper(this);
         SQLiteDatabase db = dbHelper.getReadableDatabase();

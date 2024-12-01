@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainPage extends AppCompatActivity {
 
-    TextView recommend;
+
     SearchView searchView;
 
     @Override
@@ -35,7 +35,7 @@ public class MainPage extends AppCompatActivity {
 
 
         searchView = findViewById(R.id.searchView);
-        recommend = findViewById(R.id.recommend);  // Corrected the initialization
+
 
     }
     public void onsearch(View v){
@@ -123,7 +123,7 @@ public class MainPage extends AppCompatActivity {
         String username = getIntent().getStringExtra("username");
 
         Log.d("DEBUG", "Received username: " + username);
-        // Debugging log to check username
+
         if (username != null) {
             Log.d("DEBUG", "Username passed: " + username);
         } else {

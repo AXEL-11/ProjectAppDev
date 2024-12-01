@@ -25,7 +25,7 @@ public class CheckOut extends AppCompatActivity {
         shippingAddressEditText = findViewById(R.id.shipping_address);
         phoneNumberEditText = findViewById(R.id.phone_number);
         paymentMethodGroup = findViewById(R.id.payment_method_group);
-
+// get total from addcart
         double totalPrice = getIntent().getDoubleExtra("total_price", 0.0);
 
         totalPriceTextView.setText("Total Price: ₱" + String.format("%.2f", totalPrice));
@@ -35,6 +35,7 @@ public class CheckOut extends AppCompatActivity {
     }
 
     private void confirmPayment() {
+        // get data from user
         String address = shippingAddressEditText.getText().toString().trim();
         String phone = phoneNumberEditText.getText().toString().trim();
 
@@ -54,13 +55,14 @@ public class CheckOut extends AppCompatActivity {
             return;
         }
 
-
+//radio button
         int selectedId = paymentMethodGroup.getCheckedRadioButtonId();
+        //check if something is selected
         if (selectedId == -1) {
             Toast.makeText(this, "Please select a payment method.", Toast.LENGTH_SHORT).show();
             return;
         }
-
+//retrieve
         RadioButton selectedRadioButton = findViewById(selectedId);
         String paymentMethod = selectedRadioButton.getText().toString();
 

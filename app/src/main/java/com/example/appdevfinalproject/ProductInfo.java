@@ -45,7 +45,7 @@ public class ProductInfo extends AppCompatActivity {
 
 
     }
-
+// add to cart
     public void onAdd(View v) {
         String username = getIntent().getStringExtra("username");
 

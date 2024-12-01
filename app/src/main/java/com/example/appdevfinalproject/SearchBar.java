@@ -39,7 +39,7 @@ public class SearchBar extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         SearchView searchView = findViewById(R.id.searchView);
 
-
+// add items or products
         itemList = new ArrayList<>();
         itemList.add(new Item("M8 Smart Monitor", "18,990.00", R.drawable.monitorm8, "a versatile 32-inch 4K UHD display that combines the functionality of a traditional monitor with smart TV features, making it suitable for work, entertainment, and gaming.", "Display: 32-inch 4K UHD (3840 x 2160) resolution with HDR10+ support for vivid colors and deep contrast.\nDesign: Slim and stylish build with a height-adjustable and tiltable ergonomic stand.\nPorts: Multiple connectivity options, including USB-C, HDMI, and USB-A, supporting data transfer, device charging, and multi-screen setup", "La union"));
         itemList.add(new Item("Leaven K620 Keyboard", "825.99", R.drawable.keyboard, "A durable and stylish mechanical keyboard." , "Connection: Wired (Type-C)\n" +
@@ -84,13 +84,13 @@ public class SearchBar extends AppCompatActivity {
 
 
 
-        filteredList = new ArrayList<>(itemList); // Initialize with all items
+        filteredList = new ArrayList<>(itemList);
 
         String username = getIntent().getStringExtra("username");
         adapter = new ItemAdapter(this, filteredList, username);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
-
+//search
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -107,12 +107,12 @@ public class SearchBar extends AppCompatActivity {
         });
         
     }
-
+// ipdate displayed items
     private void filterItems(String query) {
         filteredList.clear();
 
         if (TextUtils.isEmpty(query)) {
-            filteredList.addAll(itemList); // Show all items if no search query
+            filteredList.addAll(itemList);
         } else {
             for (Item item : itemList) {
                 if (item.getName().toLowerCase().contains(query.toLowerCase())) {
