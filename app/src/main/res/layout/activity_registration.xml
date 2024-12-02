@@ -81,6 +81,7 @@
         android:id="@+id/btnsignup"
         android:layout_width="358dp"
         android:layout_height="48dp"
+        android:onClick="onSign"
         android:text="SIGN UP"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -133,8 +134,8 @@
         style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
         android:layout_width="379dp"
         android:layout_height="102dp"
-        android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.543">
@@ -143,7 +144,7 @@
             android:id="@+id/etmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="email"
+            android:hint="Email"
             tools:ignore="HardcodedText" />
     </com.google.android.material.textfield.TextInputLayout>
 

@@ -31,7 +31,7 @@ public class ProductInfo extends AppCompatActivity {
         productspecifications = findViewById(R.id.productspecifications);
 
         String productName = getIntent().getStringExtra("productName");
-        String productPrice = getIntent().getStringExtra("productPrice");
+        int productPrice = getIntent().getIntExtra("productPrice",0);
         int productImageResId = getIntent().getIntExtra("productImageResId", 0);
         String productDescription = getIntent().getStringExtra("productDescription");
         String productSpecifications = getIntent().getStringExtra("productSpecifications");
@@ -49,13 +49,13 @@ public class ProductInfo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProductInfo.this, CheckOut.class);
-
+                intent.putExtra("total_price", productPrice);
                 // Pass product data to checkout activity
-                intent.putExtra("productName", productname.getText().toString());
+              /*  intent.putExtra("productName", productname.getText().toString());
                 intent.putExtra("productPrice", productprice.getText().toString().replace("₱", "").trim());
                 intent.putExtra("productDescription", productdescription.getText().toString());
                 intent.putExtra("productSpecifications", productspecifications.getText().toString());
-                intent.putExtra("productLocation", productlocation.getText().toString());
+                intent.putExtra("productLocation", productlocation.getText().toString());*/
 
                 // Start checkout activity
                 startActivity(intent);

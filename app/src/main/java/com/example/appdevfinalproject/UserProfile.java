@@ -59,11 +59,11 @@ public class UserProfile extends AppCompatActivity {
                 String phoneNumber = cursor.getString(cursor.getColumnIndexOrThrow(DBHelper.COLUMN_PHONENUMBER));
 
 
-                tvUsername.setText(username);
-                tvEmail.setText(email != null ? email : "N/A");
-                tvDateOfBirth.setText(dateOfBirth != null ? dateOfBirth : "N/A");
-                tvAddress.setText(address != null ? address : "N/A");
-                tvPhoneNumber.setText(phoneNumber != null ? phoneNumber : "N/A");
+                tvUsername.setText("Username: " + username);
+                tvEmail.setText("Email: " + (email != null ? email : "N/A"));
+                tvDateOfBirth.setText("Date of Birth: " +(dateOfBirth != null ? dateOfBirth : "N/A"));
+                tvAddress.setText("Address: " +(address != null ? address : "N/A"));
+                tvPhoneNumber.setText("Phone Number: " +(phoneNumber != null ? phoneNumber : "N/A"));
             } finally {
 
                 cursor.close();

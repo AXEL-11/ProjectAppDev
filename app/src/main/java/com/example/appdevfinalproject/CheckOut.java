@@ -26,9 +26,9 @@ public class CheckOut extends AppCompatActivity {
         phoneNumberEditText = findViewById(R.id.phone_number);
         paymentMethodGroup = findViewById(R.id.payment_method_group);
 // get total from addcart
-        double totalPrice = getIntent().getDoubleExtra("total_price", 0.0);
+        int totalPrice = getIntent().getIntExtra("total_price", 0);
 
-        totalPriceTextView.setText("Total Price: ₱" + String.format("%.2f", totalPrice));
+        totalPriceTextView.setText("Total Price: ₱" +totalPrice);
 
 
         findViewById(R.id.confirm_button).setOnClickListener(v -> confirmPayment());

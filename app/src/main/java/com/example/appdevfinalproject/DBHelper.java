@@ -102,7 +102,7 @@ public class DBHelper extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 @SuppressLint("Range") String productName = cursor.getString(cursor.getColumnIndex(COLUMN_PRODUCT_NAME));
-                @SuppressLint("Range") double productPrice = cursor.getDouble(cursor.getColumnIndex(COLUMN_PRODUCT_PRICE));
+                @SuppressLint("Range") int productPrice = cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_PRICE));
                 @SuppressLint("Range") int productImage = cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_IMAGE));
 
                 cartItems.add(new CartItem( username,productName, productPrice, productImage));

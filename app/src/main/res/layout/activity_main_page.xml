@@ -195,23 +195,31 @@
                     android:src="@drawable/img"
                     tools:srcCompat="@drawable/img" />
 
-                <TextView
-                    android:id="@+id/productname4"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="23dp"
-                    android:text="Gigabyte GeForce RTX 4060 Ti Gaming OC 16GB GDDR6 PCI Express 4.0 Graphics Card"
-                    android:textColor="#000000"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bottom"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/productprice4"
-                    android:layout_width="match_parent"
-                    android:layout_height="39dp"
-                    android:text="₱30,000"
-                    android:textColor="#9C27B0"
-                    android:textColorLink="#9C27B0"
-                    android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/productname4"
+                        android:layout_width="match_parent"
+                        android:layout_height="23dp"
+                        android:text="Gigabyte GeForce RTX 4060 "
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/productprice4"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:text="₱30,000"
+                        android:textColor="#9C27B0"
+                        android:textColorLink="#9C27B0"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -229,23 +237,31 @@
                     android:src="@drawable/img_1"
                     tools:srcCompat="@drawable/img_1" />
 
-                <TextView
-                    android:id="@+id/productname5"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="23dp"
-                    android:text="Corsair Vengeance RGB 32GB (2 x 16GB) DDR5 6000MHz C36 UDIMM Desktop Memory "
-                    android:textColor="#000000"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bottom"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/productprice5"
-                    android:layout_width="match_parent"
-                    android:layout_height="36dp"
-                    android:text="₱6,660 "
-                    android:textColor="#9C27B0"
-                    android:textColorLink="#9C27B0"
-                    android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/productname4"
+                        android:layout_width="match_parent"
+                        android:layout_height="23dp"
+                        android:text="Gigabyte GeForce RTX 4060 "
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/productprice4"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:text="₱6,660"
+                        android:textColor="#9C27B0"
+                        android:textColorLink="#9C27B0"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>

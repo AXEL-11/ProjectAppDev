@@ -86,7 +86,7 @@ public class AddCart extends AppCompatActivity {
     }
 //CALCULATE TOTAL price
     private void proceedToCheckout() {
-        double total = 0;
+        int total = 0;
 
 //iterate
         for (int i = 0; i < cartItemContainer.getChildCount(); i++) {

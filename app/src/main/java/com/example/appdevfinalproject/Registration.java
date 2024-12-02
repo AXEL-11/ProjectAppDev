@@ -99,7 +99,7 @@ public class Registration extends AppCompatActivity {
         }
 
         if (!isValidPhoneNumber(phonenumber)) {
-            Toast.makeText(this, "Invalid phone number! Must be 10 digits.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Invalid phone number! Must be 11 digits.", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -118,7 +118,7 @@ public class Registration extends AppCompatActivity {
 
         try {
             db.insertOrThrow("users", null, values);
-            Toast.makeText(this, "User registered successfully", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Registration Successful", Toast.LENGTH_SHORT).show();
 
 
             finish();
