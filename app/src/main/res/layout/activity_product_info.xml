@@ -152,8 +152,8 @@
                 android:layout_marginTop="10sp"
                 android:layout_weight="1"
                 android:onClick="onCart1"
-                android:src="@drawable/shoppingcart1"
-                tools:srcCompat="@drawable/shoppingcart1" />
+                android:src="@drawable/cart"
+                tools:srcCompat="@drawable/cart" />
 
             <Button
                 android:id="@+id/button3"
