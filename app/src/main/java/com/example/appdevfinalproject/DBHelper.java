@@ -121,6 +121,22 @@ public class DBHelper extends SQLiteOpenHelper {
                 new String[]{username}
         );
     }
+    //delete user
+    public boolean deleteUser(String username) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_USERS, COLUMN_USERNAME + "=?", new String[]{username}) > 0;
+    }
+    //edit user information
+    public boolean updateUserProfile(String username, String email, String dateOfBirth, String address, String phoneNumber) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_EMAIL, email);
+        values.put(COLUMN_DATEOFBIRTH, dateOfBirth);
+        values.put(COLUMN_ADDRESS, address);
+        values.put(COLUMN_PHONENUMBER, phoneNumber);
+
+        return db.update(TABLE_USERS, values, COLUMN_USERNAME + "=?", new String[]{username}) > 0;
+    }
 
 }
 

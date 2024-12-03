@@ -29,7 +29,7 @@ public class ProductInfo extends AppCompatActivity {
         productdescription = findViewById(R.id.productdescription);
         productlocation = findViewById(R.id.productlocation);
         productspecifications = findViewById(R.id.productspecifications);
-
+// get extra from searchbar and main page
         String productName = getIntent().getStringExtra("productName");
         int productPrice = getIntent().getIntExtra("productPrice",0);
         int productImageResId = getIntent().getIntExtra("productImageResId", 0);
@@ -109,6 +109,7 @@ public class ProductInfo extends AppCompatActivity {
 
         Toast.makeText(this, productName + " added to cart", Toast.LENGTH_SHORT).show();
     }
+    // view cart
     public void onCart1(View v) {
         String username = getIntent().getStringExtra("username");
 

@@ -38,6 +38,7 @@ public class MainPage extends AppCompatActivity {
 
 
     }
+    //proceed to searchbar
     public void onsearch(View v){
         String username = getIntent().getStringExtra("username");
         Intent intent = new Intent(this, SearchBar.class);
@@ -113,12 +114,14 @@ public class MainPage extends AppCompatActivity {
         intent.putExtra("username", username);
         startActivity(intent);
     }
+    // proceed on user profile
     public void OnUser(View v) {
         String username = getIntent().getStringExtra("username");
         Intent intent = new Intent(this, UserProfile.class);
         intent.putExtra("username", username);
         startActivity(intent);
     }
+    //proceed to cart
     public void onCart(View v) {
         String username = getIntent().getStringExtra("username");
 

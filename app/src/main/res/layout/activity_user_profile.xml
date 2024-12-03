@@ -27,7 +27,7 @@
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/tvEmail"
+        android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30sp"
@@ -35,7 +35,7 @@
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/tvDateOfBirth"
+        android:id="@+id/etDateOfBirth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30sp"
@@ -43,7 +43,7 @@
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/tvAddress"
+        android:id="@+id/etAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30sp"
@@ -51,7 +51,7 @@
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/tvPhoneNumber"
+        android:id="@+id/etPhoneNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30sp"
@@ -59,10 +59,24 @@
         android:textSize="24sp" />
 
     <Button
+        android:id="@+id/button6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onEdit"
+        android:text="Edit" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onDelete"
+        android:text="Delete" />
+
+    <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200sp"
+        android:layout_marginTop="160sp"
         android:onClick="onLogout"
         android:text="Log Out"
         android:textSize="24sp" />

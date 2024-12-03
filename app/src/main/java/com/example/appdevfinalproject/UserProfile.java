@@ -32,10 +32,10 @@ public class UserProfile extends AppCompatActivity {
 
         dbHelper = new DBHelper(this);
         tvUsername = findViewById(R.id.tvUsername);
-        tvEmail = findViewById(R.id.tvEmail);
-        tvDateOfBirth = findViewById(R.id.tvDateOfBirth);
-        tvAddress = findViewById(R.id.tvAddress);
-        tvPhoneNumber = findViewById(R.id.tvPhoneNumber);
+        tvEmail = findViewById(R.id.etEmail);
+        tvDateOfBirth = findViewById(R.id.etDateOfBirth);
+        tvAddress = findViewById(R.id.etAddress);
+        tvPhoneNumber = findViewById(R.id.etPhoneNumber);
 
         // Get the username passed via intent
         String username = getIntent().getStringExtra("username");
@@ -72,7 +72,30 @@ public class UserProfile extends AppCompatActivity {
             Toast.makeText(this, "User data not found", Toast.LENGTH_SHORT).show();
         }
     }
-
+    // deletes the user profile
+    public void onDelete(View v) {
+        String username = getIntent().getStringExtra("username");
+        if (username != null && !username.isEmpty()) {
+            boolean isDeleted = dbHelper.deleteUser(username);
+            if (isDeleted) {
+                Toast.makeText(this, "Profile deleted successfully", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+            } else {
+                Toast.makeText(this, "Failed to delete profile", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+    // edit the user profile
+    public void onEdit(View v) {
+        String username = getIntent().getStringExtra("username");
+        Intent intent = new Intent(this, EditProfile.class);
+        intent.putExtra("username", username);
+        startActivity(intent);
+    }
+    //logout the user
     public void onLogout(View v) {
 
         Intent intent = new Intent(this, MainActivity.class);

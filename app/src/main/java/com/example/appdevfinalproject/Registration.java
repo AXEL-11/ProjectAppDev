@@ -86,7 +86,7 @@ public class Registration extends AppCompatActivity {
         String phonenumber = etphone.getText().toString().trim();
         String date = etdate.getText().toString().trim();
 
-
+// check for errors
         if (username.isEmpty() || password.isEmpty() || email.isEmpty() ||
                 address.isEmpty() || phonenumber.isEmpty() || date.isEmpty()) {
             Toast.makeText(this, "All fields are required!", Toast.LENGTH_SHORT).show();
