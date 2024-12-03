@@ -12,7 +12,7 @@
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="USERPROFILE"
+        android:text="My Account"
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold" />
@@ -63,14 +63,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onEdit"
-        android:text="Edit" />
+        android:text="Update Profile" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onDelete"
-        android:text="Delete" />
+        android:text="Remove Account" />
 
     <Button
         android:id="@+id/button"
