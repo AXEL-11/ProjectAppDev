@@ -15,6 +15,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 public class MainPage extends AppCompatActivity {
 
 
@@ -46,8 +48,16 @@ public class MainPage extends AppCompatActivity {
         startActivity(intent);
     }
     public void Onitem1(View v){
-        String username = getIntent().getStringExtra("username");
         Intent intent = new Intent(this, ProductInfo.class);
+        ArrayList<Integer> images = new ArrayList<>();
+        images.add(R.drawable.monitorm8);
+        images.add(R.drawable.monitor1);
+        images.add(R.drawable.monitor2);
+        images.add(R.drawable.monitor3);
+        intent.putIntegerArrayListExtra("productImages", images);
+        String username = getIntent().getStringExtra("username");
+
+        intent.putExtra("productImage", R.drawable.monitorm8);
         intent.putExtra("productName", "M8 Smart Monitor");
         intent.putExtra("productPrice", 18990);
         intent.putExtra("productImageResId", R.drawable.monitorm8);
@@ -58,11 +68,12 @@ public class MainPage extends AppCompatActivity {
         startActivity(intent);
     }
     public void Onitem2(View v){
+
         String username = getIntent().getStringExtra("username");
         Intent intent = new Intent(this, ProductInfo.class);
         intent.putExtra("productName", "Leaven K620 Keyboard");
         intent.putExtra("productPrice", 825);
-        intent.putExtra("productImageResId", R.drawable.keyboard);
+       intent.putExtra("productImageResId", R.drawable.keyboard);
         intent.putExtra("productDescription", " a compact 61-key mechanical keyboard designed for gaming and productivity.");
         intent.putExtra("productSpecifications", "Connection: Wired (Type-C)\n" +
                 "Material: PBT keycaps with injection molding\n" +
@@ -71,6 +82,14 @@ public class MainPage extends AppCompatActivity {
                 "Dimensions: Lightweight and portable design optimized for compact setup");
         intent.putExtra("productLocation", "Laguna");
         intent.putExtra("username", username);
+        ArrayList<Integer> images = new ArrayList<>();
+        images.add(R.drawable.keyboard);
+        images.add(R.drawable.keyboard1);
+        images.add(R.drawable.keyboard2);
+        images.add(R.drawable.keyboard3);
+        intent.putIntegerArrayListExtra("productImages", images);
+        intent.putExtra("productImage", R.drawable.keyboard);
+
         startActivity(intent);
     }
 
@@ -84,6 +103,14 @@ public class MainPage extends AppCompatActivity {
         intent.putExtra("productSpecifications", "Model: GV-N406T-GAMING-OC-16GD - SKU: 6551341 -\n Memory: 16GB GDDR6 - \nInterface: PCI Express 4.0 - \nFeatures: Enhanced RT cores, tensor cores, AI acceleration ");
         intent.putExtra("productLocation", "La Union");
         intent.putExtra("username", username);
+
+        ArrayList<Integer> images = new ArrayList<>();
+        images.add(R.drawable.img);
+        images.add(R.drawable.giga);
+        images.add(R.drawable.giga1);
+        images.add(R.drawable.giga2);
+        intent.putIntegerArrayListExtra("productImages", images);
+        intent.putExtra("productImage", R.drawable.img);
         startActivity(intent);
     }
 
@@ -97,6 +124,14 @@ public class MainPage extends AppCompatActivity {
         intent.putExtra("productSpecifications", " Model: CMH32GX5M2E6000C36W - SKU: 6562319 - Capacity: 32GB (2 x 16GB) - Speed: 6000MHz - Latency: C36 - Features: RGB lighting, onboard voltage regulation, Intel XMP 3.0 support ");
         intent.putExtra("productLocation", "Baguio");
         intent.putExtra("username", username);
+
+        ArrayList<Integer> images = new ArrayList<>();
+        images.add(R.drawable.img_1);
+        images.add(R.drawable.consair6000);
+        images.add(R.drawable.consair2);
+
+        intent.putIntegerArrayListExtra("productImages", images);
+        intent.putExtra("productImage", R.drawable.img_1);
         startActivity(intent);
     }
 
@@ -112,6 +147,14 @@ public class MainPage extends AppCompatActivity {
                 "Memory Clock Speed: 21Gbps\n");
         intent.putExtra("productLocation", "Bicol");
         intent.putExtra("username", username);
+        ArrayList<Integer> images = new ArrayList<>();
+        images.add(R.drawable.img_5);
+        images.add(R.drawable.rtx4090);
+        images.add(R.drawable.rtx4901);
+        images.add(R.drawable.rtx40903);
+
+        intent.putIntegerArrayListExtra("productImages", images);
+        intent.putExtra("productImage", R.drawable.img_5);
         startActivity(intent);
     }
     // proceed on user profile

@@ -39,7 +39,12 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         Item item = itemList.get(position);
         holder.nameTextView.setText(item.getName());
         holder.priceTextView.setText("₱"+item.getPrice());
-        holder.itemImageView.setImageResource(item.getImageResId());
+        if (item.getImageResId() != null && !item.getImageResId().isEmpty()) {
+            holder.itemImageView.setImageResource(item.getImageResId().get(0)); // Show the first image
+        } else {
+            holder.itemImageView.setImageResource(R.drawable.bell1); // Fallback image
+        }
+
 
 // click
         holder.itemView.setOnClickListener(v -> {
@@ -47,7 +52,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             intent.putExtra("username", username);
             intent.putExtra("productName", item.getName());
             intent.putExtra("productPrice", item.getPrice());
-            intent.putExtra("productImageResId", item.getImageResId());
+            intent.putExtra("productImage", item.getImage());
+            intent.putIntegerArrayListExtra("productImages", item.getImageResId());
             intent.putExtra("productDescription", item.getDescription());
             intent.putExtra("productSpecifications", item.getSpecifications());
             intent.putExtra("productLocation", item.getLocation());

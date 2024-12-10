@@ -42,10 +42,10 @@ public class EditProfile extends AppCompatActivity {
         username = getIntent().getStringExtra("username");
         loadUserData(username);
 
-        // Set up DatePickerDialog on etDateOfBirth click
+
         etDateOfBirth.setOnClickListener(v -> showDatePickerDialog());
     }
-
+// set the current data
     private void loadUserData(String username) {
         Cursor cursor = dbHelper.getUserDetails(username);
         if (cursor != null && cursor.moveToFirst()) {
@@ -84,7 +84,7 @@ public class EditProfile extends AppCompatActivity {
         );
         datePickerDialog.show();
     }
-
+// save new data
     public void onSave(View v) {
         String email = etEmail.getText().toString().trim();
         String dateOfBirth = etDateOfBirth.getText().toString().trim();

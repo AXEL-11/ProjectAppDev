@@ -1,20 +1,24 @@
 package com.example.appdevfinalproject;
 
+import java.util.ArrayList;
+
 public class Item {
     private String name;
     private Integer price;
-    private int imageResId;
+    private ArrayList<Integer> imageResId;
     private String description;
     private  String specifications;
     private String location;
+    private Integer image;
 
-    public Item(String name, Integer price, int imageResId, String description, String specifications, String location) {
+    public Item(String name, Integer price, ArrayList<Integer> imageResId, String description, String specifications, String location, int image) {
         this.name = name;
         this.price = price;
         this.imageResId = imageResId;
         this.description = description;
         this.specifications = specifications;
         this.location = location;
+        this.image = image;
 
     }
 
@@ -26,7 +30,7 @@ public class Item {
         return price;
     }
 
-    public int getImageResId() {
+    public ArrayList<Integer> getImageResId() {
         return imageResId;
     }
 
@@ -40,5 +44,9 @@ public class Item {
 
     public String getLocation() {
         return location;
+    }
+
+    public int getImage() {
+        return image;
     }
 }

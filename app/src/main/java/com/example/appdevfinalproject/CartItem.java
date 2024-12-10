@@ -1,5 +1,7 @@
 package com.example.appdevfinalproject;
 
+import java.util.ArrayList;
+
 public class CartItem {
     private String productName;
     private int productPrice;

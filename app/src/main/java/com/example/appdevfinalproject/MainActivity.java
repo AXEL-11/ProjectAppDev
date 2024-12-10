@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
-//execte query
+//execute query
         Cursor cursor = db.rawQuery("SELECT * FROM users WHERE username=? AND password=?", new String[]{username, password});
 
         if (cursor != null) {

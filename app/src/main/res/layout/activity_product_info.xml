@@ -42,15 +42,14 @@
                 app:srcCompat="@drawable/search1" />
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/productimage"
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/productImageViewPager"
             android:layout_width="match_parent"
-            android:layout_height="151dp"
+            android:layout_height="200dp"
             android:layout_marginLeft="10sp"
             android:layout_marginTop="30sp"
             android:layout_marginRight="10sp"
-            android:layout_marginBottom="5sp"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:layout_marginBottom="5sp" />
 
         <TextView
             android:id="@+id/textView18"

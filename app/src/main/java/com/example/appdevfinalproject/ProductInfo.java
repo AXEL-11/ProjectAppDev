@@ -10,61 +10,65 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class ProductInfo extends AppCompatActivity {
 
-    TextView productname, productprice, productdescription, productlocation, productspecifications, txt2;
-    ImageView productimage;
+    TextView productname, productprice, productdescription, productlocation, productspecifications, productImage;
+    ViewPager2 productImagePager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_info);
 
-
-
+        // Initialize views
         productname = findViewById(R.id.Productname);
         productprice = findViewById(R.id.productprice);
-        productimage = findViewById(R.id.productimage);
         productdescription = findViewById(R.id.productdescription);
         productlocation = findViewById(R.id.productlocation);
         productspecifications = findViewById(R.id.productspecifications);
-// get extra from searchbar and main page
+
+        ViewPager2 productImageViewPager = findViewById(R.id.productImageViewPager);
+
+        // Get data from Intent
+
         String productName = getIntent().getStringExtra("productName");
-        int productPrice = getIntent().getIntExtra("productPrice",0);
-        int productImageResId = getIntent().getIntExtra("productImageResId", 0);
+        int productPrice = getIntent().getIntExtra("productPrice", 0);
         String productDescription = getIntent().getStringExtra("productDescription");
         String productSpecifications = getIntent().getStringExtra("productSpecifications");
         String productLocation = getIntent().getStringExtra("productLocation");
+        ArrayList<Integer> productImages = getIntent().getIntegerArrayListExtra("productImages");
 
+        // Populate the views
         productname.setText(productName);
         productprice.setText("₱" + productPrice);
-        productimage.setImageResource(productImageResId);
         productdescription.setText(productDescription != null ? productDescription : "No description available.");
         productspecifications.setText(productSpecifications != null ? productSpecifications : "No specifications available.");
         productlocation.setText(productLocation != null ? productLocation : "Unknown location");
 
+        // Set up the ViewPager2 with the adapter
+        if (productImages != null && !productImages.isEmpty()) {
+            ImagePagerAdapter adapter = new ImagePagerAdapter(this, productImages);
+            productImageViewPager.setAdapter(adapter);
+        } else {
+            Toast.makeText(this, "No images available for this product", Toast.LENGTH_SHORT).show();
+        }
+
+
         Button buyNowButton = findViewById(R.id.button3);
-        buyNowButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ProductInfo.this, CheckOut.class);
-                intent.putExtra("total_price", productPrice);
-                // Pass product data to checkout activity
-              /*  intent.putExtra("productName", productname.getText().toString());
-                intent.putExtra("productPrice", productprice.getText().toString().replace("₱", "").trim());
-                intent.putExtra("productDescription", productdescription.getText().toString());
-                intent.putExtra("productSpecifications", productspecifications.getText().toString());
-                intent.putExtra("productLocation", productlocation.getText().toString());*/
-
-                // Start checkout activity
-                startActivity(intent);
-            }
+        buyNowButton.setOnClickListener(v -> {
+            Intent intent = new Intent(ProductInfo.this, CheckOut.class);
+            intent.putExtra("total_price", productPrice);
+            startActivity(intent);
         });
-
-
     }
-// add to cart
+
+    // Add to cart functionality
     public void onAdd(View v) {
         String username = getIntent().getStringExtra("username");
 
@@ -75,20 +79,14 @@ public class ProductInfo extends AppCompatActivity {
 
         String productName = productname.getText().toString();
         String productPriceString = productprice.getText().toString().replace("₱", "").trim();
-        int productImageResId = getIntent().getIntExtra("productImageResId", 0);
 
         if (productName.isEmpty() || productPriceString.isEmpty()) {
             Toast.makeText(this, "Product name or price cannot be empty", Toast.LENGTH_SHORT).show();
             return;
         }
 
-
         double productPrice;
         try {
-            if (!productPriceString.matches("\\d+(\\.\\d+)?")) {
-                Toast.makeText(this, "Invalid price format", Toast.LENGTH_SHORT).show();
-                return;
-            }
             productPrice = Double.parseDouble(productPriceString);
         } catch (NumberFormatException e) {
             Log.e("ProductInfo", "Invalid price format", e);
@@ -96,30 +94,14 @@ public class ProductInfo extends AppCompatActivity {
             return;
         }
 
-
-        if (productImageResId == 0) {
-            Toast.makeText(this, "Invalid product image", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-
         DBHelper dbHelper = new DBHelper(this);
-        dbHelper.addToCart(getIntent().getStringExtra("username"), getIntent().getStringExtra("productName"), productPrice, getIntent().getIntExtra("productImageResId", 0));
-
-
+        dbHelper.addToCart(username, productName, productPrice, getIntent().getIntExtra("productImage", 0));
         Toast.makeText(this, productName + " added to cart", Toast.LENGTH_SHORT).show();
     }
-    // view cart
+
+    // View cart functionality
     public void onCart1(View v) {
         String username = getIntent().getStringExtra("username");
-
-        Log.d("DEBUG", "Received username: " + username);
-        // Debugging log to check username
-        if (username != null) {
-            Log.d("DEBUG", "Username passed: " + username);
-        } else {
-            Log.e("DEBUG", "Username is null!");
-        }
 
         if (username != null) {
             Intent intent = new Intent(this, AddCart.class);
