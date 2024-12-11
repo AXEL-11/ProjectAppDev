@@ -100,7 +100,7 @@ public class EditProfile extends AppCompatActivity {
             startActivity(intent);
 
         } else {
-            Toast.makeText(this, "Failed to update profile", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Failed to update profile ", Toast.LENGTH_SHORT).show();
         }
     }
 }
