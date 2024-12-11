@@ -1,6 +1,7 @@
 package com.example.appdevfinalproject;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -94,7 +95,10 @@ public class EditProfile extends AppCompatActivity {
         boolean isUpdated = dbHelper.updateUserProfile(username, email, dateOfBirth, address, phoneNumber);
         if (isUpdated) {
             Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show();
-            finish();
+            Intent intent = new Intent(this, UserProfile.class);
+            intent.putExtra("username", username);
+            startActivity(intent);
+
         } else {
             Toast.makeText(this, "Failed to update profile", Toast.LENGTH_SHORT).show();
         }
