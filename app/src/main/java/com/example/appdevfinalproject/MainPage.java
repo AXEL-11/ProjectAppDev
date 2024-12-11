@@ -36,7 +36,7 @@ public class MainPage extends AppCompatActivity {
         });
 
 
-        searchView = findViewById(R.id.searchView);
+      //  searchView = findViewById(R.id.searchView);
 
 
     }
